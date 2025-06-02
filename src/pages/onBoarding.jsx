@@ -9,6 +9,7 @@ function OnBoarding() {
   const navigate=useNavigate();
 
   const handleRole=async(role)=>{
+    //In Clerk, unsafeMetadata is a property that allows you to store custom metadata on a user object — data that is readable and writable by both frontend and backend.
     await user.update({unsafeMetadata:{role}})
     .then(()=>{
       navigate(role === 'recruiter' ? ('/postJob') : ('/jobListing'))
