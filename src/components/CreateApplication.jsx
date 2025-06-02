@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ApplicationCard from './ApplicationCard';
 import { BarLoader } from 'react-spinners';
 import useFetch from '@/hooks/useFetch';
